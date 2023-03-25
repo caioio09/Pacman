@@ -23,19 +23,13 @@ public class Ghost extends GameObject {
     }
 
     public void mover(int direction) {
-        /*int[] direcoes = { 0, 90, 180, 270 };
-        int n = rand.nextInt(100) + 1;
+        int n = rand.nextInt(100);
 
-        if (n <= 20) {
-            int p = rand.nextInt(3)+ 1;
-            while (direcoes[p] == direction) {
-                p = rand.nextInt(3);
-            }
-            direction = direcoes[p];
-        }*/
-
-        int p = rand.nextInt(3) + 1;
-
+        if (n <= 50) {
+            int p = rand.nextInt(4) + 1;
+        
+            System.out.println(p);
+        
         if(p == 1){
             direction = 0;
         } else if (p == 2){
@@ -45,8 +39,7 @@ public class Ghost extends GameObject {
         } else {
             direction = 270;
         }
-
-        System.out.println(p);
+    }
 
         if (podeMover()) {
 
@@ -62,13 +55,14 @@ public class Ghost extends GameObject {
             // mover pra baixo
             else
                 setY(getY() + 10);
+        
         }
-
+    
     }
 
     public boolean podeMover() {
         // se nao conseguir ir para esquerda falso
-        if (getX() < -590 && getDirection() == 270) {
+        if (getX()  < 0 && getDirection() == 270) {
 
             return false;
         }
@@ -78,7 +72,7 @@ public class Ghost extends GameObject {
             return false;
         }
         // se nao conseguir ir para cima falso
-        else if (getY() < -590 && getDirection() == 0) {
+        else if (getY() < 0 && getDirection() == 0) {
 
             return false;
         }

@@ -40,8 +40,7 @@ public class Player extends GameObject {
     }
 
     public void mover() {
-        System.out.println(this.getX());
-
+        
         if (podeMover()) {
 
             // mover direita
@@ -62,7 +61,7 @@ public class Player extends GameObject {
 
     public boolean podeMover() {
         // se nao conseguir ir para esquerda falso
-        if (getX() < -590 && getDirection() == 270) {
+        if (getX() < 10 && getDirection() == 270) {
 
             return false;
         }
@@ -72,7 +71,7 @@ public class Player extends GameObject {
             return false;
         }
         // se nao conseguir ir para cima falso
-        else if (getY() < -590 && getDirection() == 0) {
+        else if (getY() < 10 && getDirection() == 0) {
 
             return false;
         }

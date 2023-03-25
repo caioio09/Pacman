@@ -86,12 +86,13 @@ public class Game extends JFrame implements KeyListener {
 	private void run() {
 		while (player.getLife() > 0) {
 			
-			// ghost1.mover(ghost1.getDirection());
-			// ghost2.mover(ghost2.getDirection());
-			// ghost3.mover(ghost3.getDirection());
-			// ghost4.mover(ghost4.getDirection());
+			 ghost1.mover(ghost1.getDirection());
+			 ghost2.mover(ghost2.getDirection());
+			 ghost3.mover(ghost3.getDirection());
+			 ghost4.mover(ghost4.getDirection());
 			 player.mover();
-            
+
+
 			try {
 				Thread.sleep(speed);
 			} catch (InterruptedException e) {
